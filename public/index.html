@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">  
+        <div class="sub-container" >
+            <h1>Enter data using excel sheet</h1>
+            <form method="POST" action="/files" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <input type="submit" value="Upload"/>
+            </form>
+        </div>
+        <div class="sub-container" style="  margin-top: 150px;">
+            <h1>Enter data manually</h1>
+            <form id="form" action="/submit" method="POST">
+                <div class="form-container">
+                    <div id="section">
+                        <label for="number">Enter Phone Number with country code: </label>
+                        <input type="text" name="number" id="number">
+                    </div> 
+                </div>
+                <br>
+                <button id="add">Add number</button><br><br>
+                <label for="message">Enter your message: </label>
+                <input type="text" name="message" id="message"><br><br>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/form.js"></script>
+</html>
